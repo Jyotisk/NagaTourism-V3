@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?8jyc7g');
+  src:  url('../fonts/icomoon.eot?8jyc7g#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?8jyc7g') format('truetype'),
+    url('../fonts/icomoon.woff?8jyc7g') format('woff'),
+    url('../fonts/icomoon.svg?8jyc7g#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-edit:before {
+  content: "\e904";
+  /* color: #94a3b8; */
+}
+.icon-profile:before {
+  content: "\e905";
+  /* color: #94a3b8; */
+}
+.icon-hotel:before {
+  content: "\e900";
+  /* color: #94a3b8; */
+}
+.icon-blog:before {
+  content: "\e901";
+  /* color: #94a3b8; */
+}
+.icon-photo:before {
+  content: "\e902";
+  /* color: #94a3b8; */
+}
+.icon-travel:before {
+  content: "\e903";
+  /* color: #94a3b8; */
+}
