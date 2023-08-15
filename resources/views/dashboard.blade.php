@@ -36,7 +36,8 @@
                                 <a href="{{url('user/task-details')}}/{{$task->id}}" class="stretched-link">
                                     <div class="uk-card uk-card-hover uk-card-body uk-light p-1">
                                         <!-- <img src="{{ asset('img/new1.jpg') }}" alt="Task Image" style="height: 150px; object-fit: cover"> -->
-                                        <img src="{{ url('storage/app/public/'."$task->image") }}" alt="Task Image"  style="height: 150px; object-fit: cover">
+                                        <!-- <img src="{{ url('storage/app/public/'."$task->image") }}" alt="Task Image"  style="height: 150px; object-fit: cover"> -->
+                                        <img src="{{ url('storage/'."$task->image") }}" alt="Task Image"  style="height: 150px; object-fit: cover">
 
                                         <h4 class="uk-card-title" style="font-size: 15px; color: #333">{{$task->header}}</h4>
                                         <!-- <p>{{Str::limit($task->descriptions, 30)}}</p> -->

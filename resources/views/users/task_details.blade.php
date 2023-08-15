@@ -33,7 +33,8 @@
                         <div class="item">
                             <a href="{{url('user/task-details')}}/{{$new->id}}" class="stretched-link">
                                 <div class="uk-card uk-card-hover uk-card-body uk-light p-1">
-                                    <img src="{{ url('storage/app/public/'."$new->image") }}" alt="Task Image" style="height: 150px; object-fit: cover">
+                                    <!-- <img src="{{ url('storage/app/public/'."$new->image") }}" alt="Task Image" style="height: 150px; object-fit: cover"> -->
+                                    <img src="{{ url('storage/'."$new->image") }}" alt="Task Image" style="height: 150px; object-fit: cover">
                                 </div>
                             </a>
                         </div>
@@ -45,16 +46,18 @@
                         <div class="trending-field">
                             @foreach($other_tasks AS $ot)
                             <div class="card" style="border: 0; background-color: transparent">
-                                <a href="{{url('user/task-details')}}/{{$ot->id}}" class="stretched-link">
-                                    <div class="card-body d-flex align-items-center gap-2">
-                                        <!-- <img class="trending-pic" src="{{asset('img/new1.jpg')}}" alt="Trending Pic" width="510" height="340" /> -->
-                                        <img src="{{ url('storage/app/public/'."$ot->image") }}" alt="Trending Pic" width="510" height="340">
-
+                                <a href="{{url('user/task-details')}}/{{$ot->id}}">
+                                <div class="card" style="border: 0; background-color: transparent">
+                                    <div class="card-body d-flex flex-column align-items-center gap-2">
+                                        <!-- <img src="{{ url('storage/app/public/'."$ot->image") }}" alt="Trending Pic" width="510" height="340"> -->    
+                                    <img class="trending-pic" src="{{ url('storage/'."$ot->image") }}" alt="Trending Pic" width="510" height="340" />
                                         <p class="m-0">
-                                            {{$ot->header}}
+                                        {{$ot->header}}
+
                                         </p>
                                     </div>
-                                </a>
+                                </div>
+                            </a>
                             </div>
                             @endforeach
                             <!-- <div class="card" style="border: 0; background-color: transparent">
@@ -119,7 +122,8 @@
                             <div class="row mb-5">
                                 <div class="col-12 col-lg-6 p-0">
                                     <!-- <img src="{{ asset('img/new1.jpg') }}" style="width: 100%;"> -->
-                                    <img src="{{ url('storage/app/public/'."$task_details->image") }}" style="width: 70%;">
+                                    <!-- <img src="{{ url('storage/app/public/'."$task_details->image") }}" style="width: 70%;"> -->
+                                    <img src="{{ url('storage/'."$task_details->image") }}" style="width: 70%;">
 
                                 </div>
                                 <div class="col-12 col-lg-6 d-flex flex-column justify-content-center" style="background: #90c747;">
@@ -170,7 +174,8 @@
                         </div>
                         @else
                         <div class="col-12">
-                            <img src="{{ url('storage/app/public/'."$task_details->image") }}" style="width: 70%;">
+                            <!-- <img src="{{ url('storage/app/public/'."$task_details->image") }}" style="width: 70%;"> -->
+                            <img src="{{ url('storage/'."$task_details->image") }}" style="width: 70%;">
 
                         </div>
                         @endif
