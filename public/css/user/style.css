@@ -12,12 +12,17 @@
     font-style: normal;
 }
 
+body {
+    overflow-x: hidden !important;
+}
+
 a {
     text-decoration: none !important;
     color: #2a498a;
 }
 
-ol {
+ol,
+ul {
     list-style: none;
 }
 
@@ -26,7 +31,13 @@ ol {
 }
 
 .head-section {
-    background-color: #90c747;
+    background: #3CA55C;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #B5AC49, #3CA55C);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #B5AC49, #3CA55C);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -114,13 +125,96 @@ ol {
     color: #fff;
 }
 
-footer {
+/* footer {
     border-top: 1px solid #333;
+} */
+
+.footer-wrapper {
+    background: #141e30;
+    position: relative;
+    margin-top: 80px;
+}
+
+.footer-wrapper .triangle-2 {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 100vw 100px 0;
+    border-color: transparent transparent #243b55 transparent;
+    position: absolute;
+    bottom: 100%;
+}
+
+.footer-wrapper .triangle-1 {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100vw;
+    border-color: transparent transparent #141e30 transparent;
+    position: absolute;
+    bottom: 100%;
+}
+
+.footer-wrapper ul li {
+    display: inline-flex;
+    gap: 1rem;
+}
+
+.footer-wrapper ul li i {
+    color: #FCAF43 !important;
+}
+
+.useful-links {
+    background-color: #fff;
+    border-radius: 18px;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #333;
+    width: 38%;
+}
+
+.footer-wrapper ul li a {
+    color: #fff;
+}
+
+.footer-wrapper ul li:nth-child(1),
+.footer-wrapper ul li:nth-child(3) {
+    align-items: center;
+}
+
+.footer-wrapper ul li:nth-child(2)>i {
+    margin-top: 6px;
 }
 
 .footer-details {
-    background-color: #1877f2;
+    background: #3CA55C;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #B5AC49, #3CA55C);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #B5AC49, #3CA55C);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     padding: 5px;
+}
+
+.footer-details p {
+    margin-top: 0 !important;
+}
+
+.follow-us {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.follow-us a {
+    background: aliceblue;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
 }
 
 /* Register Page */
@@ -146,7 +240,7 @@ footer {
 }
 
 .trending-pic {
-    width: 200px;
+    /* width: 200px; */
     height: 100px;
     object-fit: cover;
 }
@@ -159,14 +253,12 @@ footer {
 .dashbaord-header {
     font-size: 1.714em;
     display: inline-block;
-    background: linear-gradient(
-        92.61deg,
-        #9ac461 0%,
-        #548bc5 0%,
-        #59b59a 116.86%,
-        #b45d97 182.36%,
-        #dc763b 246.57%
-    );
+    background: linear-gradient(92.61deg,
+            #9ac461 0%,
+            #548bc5 0%,
+            #59b59a 116.86%,
+            #b45d97 182.36%,
+            #dc763b 246.57%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
@@ -292,7 +384,7 @@ h3 {
     margin-top: 10px;
 }
 
-.uk-card > :last-child {
+.uk-card> :last-child {
     margin-top: 0;
     margin-bottom: 10px;
 }
@@ -338,12 +430,15 @@ p {
 
 .chat-for-help {
     position: fixed;
-    top: 90%;
+    top: 80%;
     right: 18px;
+    z-index: 111;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.whatsAppBtn {
-    background-color: #25d366;
+.help-btn {
     color: #fff;
     font-size: 36px;
     border-radius: 50%;
@@ -354,42 +449,68 @@ p {
     justify-content: center;
 }
 
+.whatsAppBtn {
+    background-color: #25d366;
+}
+
+.emailBtn {
+    background-color: #dd4b39;
+}
+
 /* Responsive */
 @media only screen and (max-width: 700px) {
+
     .otp-form-input form,
     .passowrd-form-input form {
         width: 100%;
     }
+
     .logo {
         width: 50%;
     }
+
     .tab-link {
         width: 30%;
     }
+
     #read-more-text {
         margin-left: 40% !important;
     }
+
     .chat-for-help {
         top: 85%;
+    }
+
+    .useful-links {
+        width: 100%;
     }
 }
 
 @media only screen and (min-width: 701px) and (max-width: 992px) {
+
     .otp-form-input form,
     .passowrd-form-input form {
         width: 50%;
     }
+
     .logo {
         width: 22%;
     }
+
     .tab-link {
         width: 15%;
     }
+
     #read-more-text {
         margin-left: 72% !important;
     }
+
     .chat-for-help {
-        top: 76%;
+        top: 68%;
+    }
+
+    .useful-links {
+        width: 48%;
     }
 }
 

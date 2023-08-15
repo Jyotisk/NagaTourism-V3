@@ -14,7 +14,7 @@
     <header class="head-section mb-4">
         <div class="d-flex align-items-center justify-content-center p-3">
             <a href="#">
-            <img class="logo" src="{{asset('img/new-logo.png')}}">
+                <img src="{{asset('img/logo.png')}}" alt="Logo">
             </a>
         </div>
     </header>
@@ -167,18 +167,246 @@
         </div>
     </section>
 
-    <footer class="p-4">
-        <div class="container">
-            <div class="row">
+    <footer class="footer-wrapper">
+        <div class="triangle-2"></div>
+        <div class="triangle-1"></div>
+        <div class="container-fluid p-5">
+            <div class="row pt-4 pb-4 g-4">
+                <div class="col-12 col-lg-3">
+                    <img class="w-75" src="{{asset('img/new-logo-white.png')}}" alt="Logo">
+                    <p class="text-white">
+                        A land engulped in mystery, inihabited by vibrant people zealously guarding their culture-dancers, warriors, head-hunters; mountains, valley, forest.
+                    </p>
+                    <ul class="text-white ps-0">
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>
+                                03862295093
+                            </span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>
+                                M472+F4P, DIRECTOR OF TOURISM, Raj Bhavan Road, Opp. Indoor Stadium, Kohima, Nagaland 797001
+                            </span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>
+                                info@dicovernagaland.in
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-5">
+                    <div class="d-flex justify-content-evenly gap-4">
+                        <div class="d-flex flex-column gap-2">
+                            <h4 class="text-white">
+                                <b>Activities</b>
+                            </h4>
+                            <ul class="ps-0" style="display: contents; color: #fff;">
+                                <li>
+                                    <a href="#">
+                                        Group
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Do
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Discuss
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Poll & Survey
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Blog
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Talk
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Campaigns
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Podcast
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Wall of Frame
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="d-flex flex-column gap-2">
+                            <h4 class="text-white">
+                                <b>Get to Know</b>
+                            </h4>
+                            <ul class="ps-0" style="display: contents; color: #fff;">
+                                <li>
+                                    <a href="#">
+                                        Group
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Do
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Discuss
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Poll & Survey
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Blog
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Talk
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Campaigns
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Podcast
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Wall of Frame
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="d-flex flex-column gap-2">
+                            <h4 class="text-white">
+                                <b>Help & Support</b>
+                            </h4>
+                            <ul class="ps-0" style="display: contents; color: #fff;">
+                                <li>
+                                    <a href="#">
+                                        Inbound Tourist & Inner Line Permit
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Hotel & Resort
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Tourist Guide
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Home Stay
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Bloggers & Vloggers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Photographer & Videographer
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <h4 class="text-white">
+                        <b>Useful Links</b>
+                    </h4>
+                    <div class="row g-4">
+                        <div class="col-12 col-lg-6 d-flex w-100 gap-3 flex-wrap">
+                            <a class="useful-links" href="https://www.nagaland.gov.in/      ">
+                                <img src="{{asset('img/nagaland_logo.png')}}" alt="Government Logo" style="width: 33%">
+                                Nagaland Government
+                            </a>
+                            <a class="useful-links" href="https://tourism.gov.in/">
+                                <img src="{{asset('img/emblem-dark.png')}}" alt="Government Logo" style="width: 20%">
+                                Ministry of Tourism
+                            </a>
+                            <a class="useful-links" href="https://www.india.gov.in/">
+                                <img src="{{asset('img/emblem-dark.png')}}" alt="Government Logo" style="width: 20%">
+                                Government of India
+                            </a>
+                            <a class="useful-links" href="https://www.india.gov.in/">
+                                <img src="{{asset('img/saathi.jpg')}}" alt="Government Logo" style="width: 33%">
+                                Saathi
+                            </a>
+                            <a class="useful-links" href="https://nagaland.gov.in/eservices">
+                                <img src="{{asset('img/nagaland_logo.png')}}" alt="Government Logo" style="width: 33%">
+                                Nagaland Government E-Services
+                            </a>
+                            <a class="useful-links" href="https://www.nidhi.tourism.gov.in/">
+                                <img src="{{asset('img/nidhi-logo.jpg')}}" alt="Government Logo" style="width: 33%">
+                                Nidhi
+                            </a>
+                            <a class="useful-links" href="https://nagaland.gov.in/apps">
+                                <img src="{{asset('img/nagaland_logo.png')}}" alt="Government Logo" style="width: 33%">
+                                Nagaland Government APPS
+                            </a>
+                            <a class="useful-links" href="https://pgportal.gov.in/">
+                                <img src="{{asset('img/emblem-dark.png')}}" alt="Government Logo" style="width: 20%">
+                                Centralised Public Grievance Redress and Monitoring System
+                            </a>
+                        </div>
+                    </div>  
+                </div>
                 <div class="col-12">
-                    <div class="d-flex align-items-center gap-2 justify-content-center">
-                        <img src="{{asset('img/dark_logo.png')}}" alt="Logo">
-                        <p>
-                            <b>Designed and Developed by Nagaland Government</b>
-                        </p>
+                    <div class="follow-us">
+                        <h4 class="text-white mb-0">
+                            <b>
+                                Follow Us
+                            </b>
+                        </h4>
+                        <a href="#" style="font-size: 24px; color: #1877f2">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="#" style="font-size: 24px; color: #14171a">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="footer-details">
+            <p class="mb-0 text-center text-white">
+                <b>Designed and Developed by Nagaland Government</b>
+            </p>
         </div>
     </footer>
 </body>
