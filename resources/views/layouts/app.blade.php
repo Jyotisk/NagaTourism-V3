@@ -18,7 +18,7 @@
 <body>
     <header class="head-section">
         <div class="d-flex align-items-center justify-content-between p-3">
-            <a href="#">
+            <a href="{{route('dashboard')}}">
                 <img class="logo" src="{{asset('img/new-logo.png')}}" alt="Logo">
             </a>
             <div class="dropdown">
