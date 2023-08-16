@@ -72,7 +72,7 @@
                         <h4 class="text-center mb-4">Or Login With Social Profile</h4>
                         <ol class="d-flex align-items-center justify-content-center gap-4 p-0 flex-column flex-md-row">
                             <li>
-                                <a href="#">
+                                <a href="{{route('facebook-auth')}}">
                                     <i class="fa-brands fa-facebook-f"></i>
                                     <span>
                                         Facebook
@@ -88,7 +88,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" style="background-color: #dddddd;pointer-events: none;cursor: default;">
                                     <i class="fa-brands fa-twitter"></i>
                                     <span>
                                         Twitter
@@ -96,7 +96,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#"  style="background-color: #dddddd;pointer-events: none;cursor: default;">
                                     <i class="fa-brands fa-linkedin"></i>
                                     <span>
                                         Linkedin

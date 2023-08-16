@@ -123,7 +123,7 @@
                                 <div class="col-12 col-lg-6 p-0">
                                     <!-- <img src="{{ asset('img/new1.jpg') }}" style="width: 100%;"> -->
                                     <!-- <img src="{{ url('storage/app/public/'."$task_details->image") }}" style="width: 70%;"> -->
-                                    <img src="{{ url('storage/'."$task_details->image") }}" style="width: 70%;">
+                                    <img class="w-100" src="{{ url('storage/'."$task_details->image") }}">
 
                                 </div>
                                 <div class="col-12 col-lg-6 d-flex flex-column justify-content-center" style="background: #90c747;">
@@ -146,14 +146,14 @@
                             <div class="accordion" id="description">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" onclick="toggleText(this)" style="background-color: transparent; color: #333">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" onclick="toggleText(this)" style="background-color: transparent; color: #333">
                                             Description
                                             <p id="read-more-text" class="mb-0 float-end" style="margin-left: 77%;">
-                                                Read Less
+                                                Read More
                                             </p>
                                         </button>
                                     </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#description">
+                                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#description">
                                         <div class="accordion-body">
                                             <div class="task-details-section" id="read-description">
                                                 @php

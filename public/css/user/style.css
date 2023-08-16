@@ -132,7 +132,7 @@ ul {
 .footer-wrapper {
     background: #141e30;
     position: relative;
-    margin-top: 80px;
+    margin-top: 138px;
 }
 
 .footer-wrapper .triangle-2 {
@@ -172,7 +172,7 @@ ul {
     align-items: center;
     gap: 1rem;
     color: #333;
-    width: 38%;
+    width: 48%;
 }
 
 .footer-wrapper ul li a {
@@ -430,7 +430,7 @@ p {
 
 .chat-for-help {
     position: fixed;
-    top: 80%;
+    top: 74%;
     right: 18px;
     z-index: 111;
     display: flex;
@@ -457,7 +457,23 @@ p {
     background-color: #dd4b39;
 }
 
+.callBtn {
+    background-color: #0c3866;
+}
+
 /* Responsive */
+@media only screen and (max-width: 376px) {
+    .chat-for-help {
+        top: 70% !important;
+    }
+}
+
+@media only screen and (min-width: 378px) and (max-width: 668px) {
+    .chat-for-help {
+        top: 50% !important;
+    }
+}
+
 @media only screen and (max-width: 700px) {
 
     .otp-form-input form,
@@ -478,7 +494,7 @@ p {
     }
 
     .chat-for-help {
-        top: 85%;
+        top: 76%;
     }
 
     .useful-links {
@@ -506,7 +522,7 @@ p {
     }
 
     .chat-for-help {
-        top: 68%;
+        top: 50%;
     }
 
     .useful-links {

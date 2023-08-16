@@ -28,7 +28,7 @@ Route::get('auth/google', [GoogleAuthController::class, 'redirect'])->name('goog
 Route::get('auth/google/call-back', [GoogleAuthController::class, 'callbackGoogle']);
 
 Route::get('auth/facebook', [GoogleAuthController::class, 'RedirectFacebook'])->name('facebook-auth');
-Route::get('auth/facebook/call-back', [GoogleAuthController::class, 'CallbackFacebook']);
+Route::get('auth/facebook/callback', [GoogleAuthController::class, 'CallbackFacebook']);
 
 Route::get('auth/twitter', [GoogleAuthController::class, 'RedirectTwitter'])->name('twitter-auth');
 Route::get('auth/twitter/call-back', [GoogleAuthController::class, 'CallbackTwitter']);

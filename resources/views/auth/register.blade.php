@@ -52,7 +52,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" style="background-color: #dddddd;pointer-events: none;cursor: default;">
                                     <i class="fa-brands fa-twitter"></i>
                                     <span>
                                         Twitter
@@ -60,7 +60,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" style="background-color: #dddddd;pointer-events: none;cursor: default;">
                                     <i class="fa-brands fa-linkedin"></i>
                                     <span>
                                         Linkedin
@@ -384,7 +384,7 @@
                                 Centralised Public Grievance Redress and Monitoring System
                             </a>
                         </div>
-                    </div>  
+                    </div>
                 </div>
                 <div class="col-12">
                     <div class="follow-us">

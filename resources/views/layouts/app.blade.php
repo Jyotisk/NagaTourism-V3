@@ -137,6 +137,10 @@
             data-bs-toggle="tooltip" data-bs-title="Want Any Help? Chat with us!">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
+        <a href="tel:1234567890" class="help-btn callBtn" rel="tooltip" type="button" data-bs-placement="left"
+            data-bs-toggle="tooltip" data-bs-title="Want Any Help? Call us!">
+            <i class="fa-solid fa-phone"></i>
+        </a>
         <a href="mailto:webdesign@example.com" class="help-btn emailBtn" rel="tooltip" type="button" data-bs-placement="left"
             data-bs-toggle="tooltip" data-bs-title="Want Any Help? Mail with us!">
             <i class="fa-solid fa-envelope"></i>
