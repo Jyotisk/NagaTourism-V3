@@ -266,7 +266,8 @@ ul {
 
 .tab-link-wrapper {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    gap: 1rem;
     border-bottom: 1px solid #dddddd;
 }
 
