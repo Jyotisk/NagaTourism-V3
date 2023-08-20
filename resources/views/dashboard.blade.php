@@ -7,7 +7,7 @@
                     <sapan>Participate in in Tourism-building activities</sapan>
                 </div>
                 <div class="col-12">
-                    <div class="tab-link-wrapper">
+                    <div class="tab-link-wrapper flex-wrap flex-lg-nowrap">
                         <div class="tab-link active">
                             <a class="do-icon" href="#">
                                 <i class="fa-regular fa-square-check do-icon"></i>
@@ -18,6 +18,54 @@
                             <a class="do-icon" href="#">
                                 <i class="fa-solid fa-comment"></i>
                                 Discuss
+                            </a>
+                        </div>
+                        <div class="tab-link">
+                            <a class="do-icon" href="#">
+                                <i class="fa-solid fa-chart-simple"></i>
+                                Poll/Survey
+                            </a>
+                        </div>
+                        <div class="tab-link">
+                            <a class="do-icon" href="#">
+                                <i class="fa-solid fa-book"></i>
+                                Blog
+                            </a>
+                        </div>
+                        <div class="tab-link">
+                            <a class="do-icon" href="#">
+                                <i class="fa-solid fa-microphone"></i>
+                                Talk
+                            </a>
+                        </div>
+                        <div class="tab-link">
+                            <a class="do-icon" href="#">
+                                <i class="fa-solid fa-hand-point-up"></i>
+                                Quiz
+                            </a>
+                        </div>
+                        <div class="tab-link">
+                            <a class="do-icon" href="#">
+                                <i class="fa-solid fa-barcode"></i>
+                                MG Prime
+                            </a>
+                        </div>
+                        <div class="tab-link">
+                            <a class="do-icon" href="#">
+                                <i class="fa-solid fa-volume-high"></i>
+                                Campaign
+                            </a>
+                        </div>
+                        <div class="tab-link">
+                            <a class="do-icon" href="#">
+                                <i class="fa-solid fa-handshake"></i>
+                                Pledge
+                            </a>
+                        </div>
+                        <div class="tab-link">
+                            <a class="do-icon" href="#">
+                                <i class="fa-solid fa-podcast"></i>
+                                Pledge
                             </a>
                         </div>
                     </div>
@@ -43,9 +91,11 @@
                                     <div class="uk-card uk-card-hover uk-card-body uk-light p-1">
                                         <!-- <img src="{{ asset('img/new1.jpg') }}" alt="Task Image" style="height: 150px; object-fit: cover"> -->
                                         <!-- <img src="{{ url('storage/app/public/'."$task->image") }}" alt="Task Image"  style="height: 150px; object-fit: cover"> -->
-                                        <img src="{{ url('storage/'."$task->image") }}" alt="Task Image" style="height: 150px; object-fit: cover">
+                                        <img src="{{ url('storage/'."$task->image") }}" alt="Task Image"
+                                            style="height: 150px; object-fit: cover">
 
-                                        <h4 class="uk-card-title" style="font-size: 15px; color: #333">{{$task->header}}</h4>
+                                        <h4 class="uk-card-title" style="font-size: 15px; color: #333">{{$task->header}}
+                                        </h4>
                                         <!-- <p>{{Str::limit($task->descriptions, 30)}}</p> -->
                                         <!-- <h4>Published: {{$task->date}}</h4> -->
                                     </div>
@@ -71,7 +121,8 @@
                     <form id="register-form">
                         @csrf
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="pincode" placeholder="Pincode" name="pincode" Maxlength="6">
+                            <input type="text" class="form-control" id="pincode" placeholder="Pincode" name="pincode"
+                                Maxlength="6">
                             <span id="pincode_error" class="text-danger"></span>
                         </div>
                         <div class="mb-3">
@@ -102,7 +153,8 @@
                             </div>
                         </div>
                         <div class="form-floating mb-3">
-                            <textarea class="form-control" placeholder="Address" id="address" style="height: 100px" name="address"></textarea>
+                            <textarea class="form-control" placeholder="Address" id="address" style="height: 100px"
+                                name="address"></textarea>
                             <label for="comment">Address</label>
                         </div>
                         <button class="btn btn-primary">
@@ -115,83 +167,85 @@
     </div>
 </x-app-layout>
 <script>
-    $('.owl-carousel').owlCarousel({
-        loop: false,
-        stagePadding: 15,
-        margin: 10,
-        nav: true,
-        navText: ['<span class="uk-margin-small-right uk-icon" uk-icon="icon: chevron-left"></span>', '<span class="uk-margin-small-left uk-icon" uk-icon="icon: chevron-right"></span>'],
-        responsive: {
-            0: {
-                items: 1
-            },
-            640: {
-                items: 2
-            },
-            960: {
-                items: 3
-            },
-            1200: {
-                items: 4
-            }
+$('.owl-carousel').owlCarousel({
+    loop: false,
+    stagePadding: 15,
+    margin: 10,
+    nav: true,
+    navText: ['<span class="uk-margin-small-right uk-icon" uk-icon="icon: chevron-left"></span>',
+        '<span class="uk-margin-small-left uk-icon" uk-icon="icon: chevron-right"></span>'
+    ],
+    responsive: {
+        0: {
+            items: 1
+        },
+        640: {
+            items: 2
+        },
+        960: {
+            items: 3
+        },
+        1200: {
+            items: 4
         }
-    });
+    }
+});
 
-    $(document).ready(function() {
-        var pincode = "{{Auth::User()->pincode}}";
-        if (pincode == '') {
-            $('#updateProfile').modal('show');
-        }
-    })
+$(document).ready(function() {
+    var pincode = "{{Auth::User()->pincode}}";
+    if (pincode == '') {
+        $('#updateProfile').modal('show');
+    }
+})
 
-    $(document).on("submit", "#register-form", function(e) {
-        e.preventDefault();
-        var formData = new FormData($(this)[0]);
-        $.ajax({
-            type: "POST",
-            url: "{{route('update-user-details')}}",
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            },
-            data: formData,
-            cache: false,
-            processData: false,
-            contentType: false
-            // dataType: "json",
-            // encode: true,
-        }).done(function(data) {
-            if (data.message == 'success') {
-                Swal.fire({
-                        title: "Success",
-                        text: "Profile Data Updated Successfully",
-                        icon: "success",
-                        buttons: true,
-                        dangerMode: true,
-                    })
-                    .then((willStore) => {
-                        if (willStore) {
-                            window.location.reload();
-                        }
-                    });
-            }
-            if (data.message == "validationFails") {
-                var message = []
-                $.each(data.error, function(index, value) {
-                    $('#' + index + '_error').html(value);
-                    // console.log(('#'+index+'_error'));  
-                    // console.log(index+'_error');   
-                });
-            }
-            if (data.message == 'error') {
-                Swal.fire({
-                    title: "Failed",
-                    text: "Something Went Wrong",
-                    icon: "error",
-                    buttons: false,
+$(document).on("submit", "#register-form", function(e) {
+    e.preventDefault();
+    var formData = new FormData($(this)[0]);
+    $.ajax({
+        type: "POST",
+        url: "{{route('update-user-details')}}",
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        data: formData,
+        cache: false,
+        processData: false,
+        contentType: false
+        // dataType: "json",
+        // encode: true,
+    }).done(function(data) {
+        if (data.message == 'success') {
+            Swal.fire({
+                    title: "Success",
+                    text: "Profile Data Updated Successfully",
+                    icon: "success",
+                    buttons: true,
                     dangerMode: true,
                 })
-            }
+                .then((willStore) => {
+                    if (willStore) {
+                        window.location.reload();
+                    }
+                });
+        }
+        if (data.message == "validationFails") {
+            var message = []
+            $.each(data.error, function(index, value) {
+                $('#' + index + '_error').html(value);
+                // console.log(('#'+index+'_error'));  
+                // console.log(index+'_error');   
+            });
+        }
+        if (data.message == 'error') {
+            Swal.fire({
+                title: "Failed",
+                text: "Something Went Wrong",
+                icon: "error",
+                buttons: false,
+                dangerMode: true,
+            })
+        }
 
-        });
     });
+});
 </script>

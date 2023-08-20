@@ -19,7 +19,7 @@
             <div class="row mb-4 g-4">
                 <div class="col-12">
                     <div class="d-flex justify-content-center logo-wrapper">
-                        <img class="logo" src="{{asset('img/new-logo.png')}}" style="width: 11%;">
+                        <img class="logo" src="{{asset('img/new-logo.png')}}" style="width: 100%;">
                     </div>
                 </div>
                 <div class="col-12">

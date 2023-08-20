@@ -164,6 +164,14 @@ ul {
     color: #FCAF43 !important;
 }
 
+.bigger-text {
+    font-size: 25px;
+}
+
+.menu-text {
+    font-size: 22px;
+}
+
 .useful-links {
     background-color: #fff;
     border-radius: 18px;
@@ -171,8 +179,17 @@ ul {
     display: flex;
     align-items: center;
     gap: 1rem;
-    color: #333;
     width: 48%;
+}
+
+.useful-links a {
+    display: flex;
+    gap: 1rem;
+    padding: 0 10px;
+    width: 100%;
+    height: 100%;
+    color: #333 !important;
+    align-items: center;    
 }
 
 .footer-wrapper ul li a {
@@ -264,6 +281,20 @@ ul {
     font-weight: 700;
 }
 
+nav .nav-item {
+    position: relative;
+}
+
+nav .nav-item .nav-link.active:after {
+    content: "";
+    background-color: #333;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
 .tab-link-wrapper {
     display: flex;
     /* justify-content: space-between; */
@@ -311,9 +342,46 @@ ul {
     left: 0px;
 }
 
-.tab-link.active a.do-icon {
+.tab-link:nth-child(1).active a.do-icon {
     border: 1px solid #ce6300;
 }
+
+.tab-link:nth-child(2).active a.do-icon {
+    border: 1px solid #3A8AB7;
+}
+
+.tab-link:nth-child(3).active a.do-icon {
+    border: 1px solid #52B0B7;
+}
+
+.tab-link:nth-child(4).active a.do-icon {
+    border: 1px solid #EFAA40;
+}
+
+.tab-link:nth-child(5).active a.do-icon {
+    border: 1px solid #B92B5C;
+}
+
+.tab-link:nth-child(6).active a.do-icon {
+    border: 1px solid #E1335A;
+}
+
+.tab-link:nth-child(7).active a.do-icon {
+    border: 1px solid #8EC750;
+}
+
+.tab-link:nth-child(8).active a.do-icon {
+    border: 1px solid #460DD9;
+}
+
+.tab-link:nth-child(9).active a.do-icon {
+    border: 1px solid #28AE38;
+}
+
+.tab-link:nth-child(10).active a.do-icon {
+    border: 1px solid #4744C5;
+}
+
 
 .tab-link.active a {
     overflow: hidden;
@@ -349,9 +417,106 @@ ul {
     opacity: 1;
 }
 
-.tab-link .do-icon i::before {
-    background: #ce6300;
+.tab-link:nth-child(1) > .do-icon i::before {
+    background-color: #FAEFE5;
+    color: #ce6300;
 }
+
+.tab-link:nth-child(2) > .do-icon i::before {
+    background-color: #EBF3F7;
+    color: #3A8AB7;
+}
+
+.tab-link:nth-child(3) > .do-icon i::before {
+    background-color: #EDF7F7;
+    color: #52B0B7;
+}
+
+.tab-link:nth-child(4) > .do-icon i::before {
+    background-color: #FDF6EB;
+    color: #EFAA40;
+}
+
+.tab-link:nth-child(5) > .do-icon i::before {
+    background-color: #F8E9EE;
+    color: #B92B5C;
+}
+
+.tab-link:nth-child(6) > .do-icon i::before {
+    background-color: #FCEAEE;
+    color: #E1335A;
+}
+
+.tab-link:nth-child(7) > .do-icon i::before {
+    background-color: #F3F9ED;
+    color: #8EC750;
+}
+
+.tab-link:nth-child(8) > .do-icon i::before {
+    background-color: #ECE6FB;
+    color: #460DD9;
+}
+
+.tab-link:nth-child(9) > .do-icon i::before {
+    background-color: #E9F6EB;
+    color: #28AE38;
+}
+
+.tab-link:nth-child(10) > .do-icon i::before {
+    background-color: #ECECF9;
+    color: #4744C5;
+}
+
+.tab-link:nth-child(1):hover > .do-icon i::before, .tab-link:nth-child(1).active > .do-icon i::before {
+    background: #ce6300;
+    color: #fff;
+}
+
+.tab-link:nth-child(2):hover > .do-icon i::before, .tab-link:nth-child(2).active > .do-icon i::before {
+    background: #3A8AB7;
+    color: #fff;
+}
+
+.tab-link:nth-child(3):hover > .do-icon i::before, .tab-link:nth-child(2).active > .do-icon i::before {
+    background: #52B0B7;
+    color: #fff;
+}
+
+.tab-link:nth-child(4):hover > .do-icon i::before, .tab-link:nth-child(2).active > .do-icon i::before {
+    background: #EFAA40;
+    color: #fff;
+}
+
+.tab-link:nth-child(5):hover > .do-icon i::before, .tab-link:nth-child(2).active > .do-icon i::before {
+    background: #B92B5C;
+    color: #fff;
+}
+
+.tab-link:nth-child(6):hover > .do-icon i::before, .tab-link:nth-child(2).active > .do-icon i::before {
+    background: #E1335A;
+    color: #fff;
+}
+
+.tab-link:nth-child(7):hover > .do-icon i::before, .tab-link:nth-child(2).active > .do-icon i::before {
+    background: #8EC750;
+    color: #fff;
+}
+
+.tab-link:nth-child(8):hover > .do-icon i::before, .tab-link:nth-child(2).active > .do-icon i::before {
+    background: #460DD9;
+    color: #fff;
+}
+
+.tab-link:nth-child(9):hover > .do-icon i::before, .tab-link:nth-child(2).active > .do-icon i::before {
+    background: #28AE38;
+    color: #fff;
+}
+
+.tab-link:nth-child(10):hover > .do-icon i::before, .tab-link:nth-child(2).active > .do-icon i::before {
+    background: #4744C5;
+    color: #fff;
+}
+
 
 .tab-link i::before {
     display: block;
@@ -360,7 +525,7 @@ ul {
     position: absolute;
     left: 0px;
     top: 0px;
-    opacity: 0.1;
+    opacity: 1;
     z-index: 1;
     border-radius: 2px;
     padding-top: 5px;

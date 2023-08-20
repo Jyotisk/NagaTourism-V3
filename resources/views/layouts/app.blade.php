@@ -44,7 +44,7 @@
         </div>
     </header>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; font-size: 20px">
         <div class="container-fluid">
             <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -52,7 +52,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                <ul class="navbar-nav mb-2 mb-lg-0">
+                <ul class="navbar-nav gap-3 mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
@@ -133,16 +133,16 @@
     {{$slot}}
 
     <div class="chat-for-help">
-        <a href="https://wa.me/918638985513" class="help-btn whatsAppBtn" rel="tooltip" type="button" data-bs-placement="left"
-            data-bs-toggle="tooltip" data-bs-title="Want Any Help? Chat with us!">
+        <a href="https://wa.me/918638985513" class="help-btn whatsAppBtn" rel="tooltip" type="button"
+            data-bs-placement="left" data-bs-toggle="tooltip" data-bs-title="Want Any Help? Chat with us!">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
         <a href="tel:1234567890" class="help-btn callBtn" rel="tooltip" type="button" data-bs-placement="left"
             data-bs-toggle="tooltip" data-bs-title="Want Any Help? Call us!">
             <i class="fa-solid fa-phone"></i>
         </a>
-        <a href="mailto:webdesign@example.com" class="help-btn emailBtn" rel="tooltip" type="button" data-bs-placement="left"
-            data-bs-toggle="tooltip" data-bs-title="Want Any Help? Mail with us!">
+        <a href="mailto:webdesign@example.com" class="help-btn emailBtn" rel="tooltip" type="button"
+            data-bs-placement="left" data-bs-toggle="tooltip" data-bs-title="Want Any Help? Mail with us!">
             <i class="fa-solid fa-envelope"></i>
         </a>
     </div>
@@ -152,7 +152,7 @@
         <div class="triangle-1"></div>
         <div class="container-fluid p-5">
             <div class="row pt-4 pb-4 g-4">
-                <div class="col-12 col-lg-3">
+                <div class="col-12 col-lg-3 bigger-text">
                     <img class="w-75" src="{{asset('img/new-logo-white.png')}}" alt="Logo">
                     <p class="text-white">
                         A land engulped in mystery, inihabited by vibrant people zealously guarding their
@@ -186,7 +186,7 @@
                             <h4 class="text-white">
                                 <b>Activities</b>
                             </h4>
-                            <ul class="ps-0" style="display: contents; color: #fff;">
+                            <ul class="ps-0 menu-text" style="display: contents; color: #fff;">
                                 <li>
                                     <a href="#">
                                         Group
@@ -239,7 +239,7 @@
                             <h4 class="text-white">
                                 <b>Get to Know</b>
                             </h4>
-                            <ul class="ps-0" style="display: contents; color: #fff;">
+                            <ul class="ps-0 menu-text" style="display: contents; color: #fff;">
                                 <li>
                                     <a href="#">
                                         Group
@@ -292,7 +292,7 @@
                             <h4 class="text-white">
                                 <b>Help & Support</b>
                             </h4>
-                            <ul class="ps-0" style="display: contents; color: #fff;">
+                            <ul class="ps-0 menu-text" style="display: contents; color: #fff;">
                                 <li>
                                     <a href="#">
                                         Inbound Tourist & Inner Line Permit
@@ -331,42 +331,56 @@
                     <h4 class="text-white">
                         <b>Useful Links</b>
                     </h4>
-                    <div class="row g-4">
-                        <div class="col-12 col-lg-6 d-flex w-100 gap-3 flex-wrap flex-column flex-md-row">
-                            <a class="useful-links" href="https://www.nagaland.gov.in/      ">
-                                <img src="{{asset('img/nagaland_logo.png')}}" alt="Government Logo" style="width: 33%">
+                    <ul class="d-flex flex-wrap gap-4 justify-content-between p-0">
+                        <li class="useful-links">
+                            <a href="https://www.nagaland.gov.in/      ">
+                                <img src="{{asset('img/nagaland_logo.png')}}" alt="Government Logo" style="width: 15%">
                                 Nagaland Government
                             </a>
-                            <a class="useful-links" href="https://tourism.gov.in/">
-                                <img src="{{asset('img/emblem-dark.png')}}" alt="Government Logo" style="width: 20%">
+                        </li>
+                        <li class="useful-links">
+                            <a href="https://tourism.gov.in/">
+                                <img src="{{asset('img/emblem-dark.png')}}" alt="Government Logo" style="width: 10%">
                                 Ministry of Tourism
                             </a>
-                            <a class="useful-links" href="https://www.india.gov.in/">
-                                <img src="{{asset('img/emblem-dark.png')}}" alt="Government Logo" style="width: 20%">
+                        </li>
+                        <li class="useful-links">
+                            <a href="https://www.india.gov.in/">
+                                <img src="{{asset('img/emblem-dark.png')}}" alt="Government Logo" style="width: 10%">
                                 Government of India
                             </a>
-                            <a class="useful-links" href="https://www.india.gov.in/">
-                                <img src="{{asset('img/saathi.jpg')}}" alt="Government Logo" style="width: 33%">
+                        </li>
+                        <li class="useful-links">
+                            <a href="https://www.india.gov.in/">
+                                <img src="{{asset('img/saathi.jpg')}}" alt="Government Logo" style="width: 15%">
                                 Saathi
                             </a>
-                            <a class="useful-links" href="https://nagaland.gov.in/eservices">
-                                <img src="{{asset('img/nagaland_logo.png')}}" alt="Government Logo" style="width: 33%">
+                        </li>
+                        <li class="useful-links">
+                            <a href="https://nagaland.gov.in/eservices">
+                                <img src="{{asset('img/nagaland_logo.png')}}" alt="Government Logo" style="width: 15%">
                                 Nagaland Government E-Services
                             </a>
-                            <a class="useful-links" href="https://www.nidhi.tourism.gov.in/">
-                                <img src="{{asset('img/nidhi-logo.jpg')}}" alt="Government Logo" style="width: 33%">
+                        </li>
+                        <li class="useful-links">
+                            <a href="https://www.nidhi.tourism.gov.in/">
+                                <img src="{{asset('img/nidhi-logo.jpg')}}" alt="Government Logo" style="width: 15%">
                                 Nidhi
                             </a>
-                            <a class="useful-links" href="https://nagaland.gov.in/apps">
-                                <img src="{{asset('img/nagaland_logo.png')}}" alt="Government Logo" style="width: 33%">
+                        </li>
+                        <li class="useful-links">
+                            <a href="https://nagaland.gov.in/apps">
+                                <img src="{{asset('img/nagaland_logo.png')}}" alt="Government Logo" style="width: 15%">
                                 Nagaland Government APPS
                             </a>
-                            <a class="useful-links" href="https://pgportal.gov.in/">
-                                <img src="{{asset('img/emblem-dark.png')}}" alt="Government Logo" style="width: 20%">
+                        </li>
+                        <li class="useful-links">
+                            <a href="https://pgportal.gov.in/">
+                                <img src="{{asset('img/emblem-dark.png')}}" alt="Government Logo" style="width: 10%">
                                 Centralised Public Grievance Redress and Monitoring System
                             </a>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-12">
                     <div class="follow-us">
