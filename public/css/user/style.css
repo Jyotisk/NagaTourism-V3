@@ -267,6 +267,35 @@ ul {
   overflow-y: scroll;
 } */
 
+.task-details-wrapper {
+    height: 60vh;
+    overflow-y: scroll;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #8f54a0 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #8f54a0;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+
 .dashbaord-header {
     font-size: 1.714em;
     display: inline-block;
@@ -699,5 +728,8 @@ p {
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
     .tab-link {
         width: 12%;
+    }
+    .task-details-wrapper {
+        height: 90vh;
     }
 }

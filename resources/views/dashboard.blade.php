@@ -7,7 +7,7 @@
                     <sapan>Participate in in Tourism-building activities</sapan>
                 </div>
                 <div class="col-12">
-                    <div class="tab-link-wrapper flex-wrap flex-lg-nowrap">
+                    <div class="tab-link-wrapper flex-wrap flex-xl-nowrap">
                         <div class="tab-link active">
                             <a class="do-icon" href="#">
                                 <i class="fa-regular fa-square-check do-icon"></i>
