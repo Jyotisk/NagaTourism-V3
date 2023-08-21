@@ -270,6 +270,7 @@ ul {
 .task-details-wrapper {
     height: 60vh;
     overflow-y: scroll;
+    padding-top: 15px;
     padding-left: 15px;
     padding-right: 15px;
 }
