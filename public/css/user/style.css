@@ -643,6 +643,7 @@ p {
     height: 50px;
     align-items: center;
     justify-content: center;
+    padding: 34px;
 }
 
 .whatsAppBtn {
@@ -666,7 +667,7 @@ p {
 
 @media only screen and (min-width: 378px) and (max-width: 668px) {
     .chat-for-help {
-        top: 50% !important;
+        top: 60% !important;
     }
 }
 
