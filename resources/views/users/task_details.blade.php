@@ -109,7 +109,7 @@
                                                 <img class="trending-pic" src="{{ asset('img/trending-1.jpg') }}"
                                                     alt="Trending Pic" width="100" height="68" />
                                                 <div class="d-flex align-items-center">
-                                                    <p class="m-0 d-flex align-items-center flex-wrap">
+                                                    <p class="m-0 d-flex align-items-center flex-wrap text-dark">
                                                         {{$ot->header}}
                                                     </p>
                                                 </div>
