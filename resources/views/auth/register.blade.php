@@ -349,42 +349,56 @@
                     <h4 class="text-white">
                         <b>Useful Links</b>
                     </h4>
-                    <div class="row g-4">
-                        <div class="col-12 col-lg-6 d-flex w-100 gap-3 flex-wrap">
-                            <a class="useful-links" href="https://www.nagaland.gov.in/      ">
-                                <img src="{{asset('img/nagaland_logo.png')}}" alt="Government Logo" style="width: 33%">
+                    <ul class="d-flex flex-wrap gap-4 justify-content-between p-0">
+                        <li class="useful-links">
+                            <a href="https://www.nagaland.gov.in/      ">
+                                <img src="{{asset('img/nagaland_logo.png')}}" alt="Government Logo" style="width: 15%">
                                 Nagaland Government
                             </a>
-                            <a class="useful-links" href="https://tourism.gov.in/">
-                                <img src="{{asset('img/emblem-dark.png')}}" alt="Government Logo" style="width: 20%">
+                        </li>
+                        <li class="useful-links">
+                            <a href="https://tourism.gov.in/">
+                                <img src="{{asset('img/emblem-dark.png')}}" alt="Government Logo" style="width: 10%">
                                 Ministry of Tourism
                             </a>
-                            <a class="useful-links" href="https://www.india.gov.in/">
-                                <img src="{{asset('img/emblem-dark.png')}}" alt="Government Logo" style="width: 20%">
+                        </li>
+                        <li class="useful-links">
+                            <a href="https://www.india.gov.in/">
+                                <img src="{{asset('img/emblem-dark.png')}}" alt="Government Logo" style="width: 10%">
                                 Government of India
                             </a>
-                            <a class="useful-links" href="https://www.india.gov.in/">
-                                <img src="{{asset('img/saathi.jpg')}}" alt="Government Logo" style="width: 33%">
+                        </li>
+                        <li class="useful-links">
+                            <a href="https://www.india.gov.in/">
+                                <img src="{{asset('img/saathi.jpg')}}" alt="Government Logo" style="width: 15%">
                                 Saathi
                             </a>
-                            <a class="useful-links" href="https://nagaland.gov.in/eservices">
-                                <img src="{{asset('img/nagaland_logo.png')}}" alt="Government Logo" style="width: 33%">
+                        </li>
+                        <li class="useful-links">
+                            <a href="https://nagaland.gov.in/eservices">
+                                <img src="{{asset('img/nagaland_logo.png')}}" alt="Government Logo" style="width: 15%">
                                 Nagaland Government E-Services
                             </a>
-                            <a class="useful-links" href="https://www.nidhi.tourism.gov.in/">
-                                <img src="{{asset('img/nidhi-logo.jpg')}}" alt="Government Logo" style="width: 33%">
+                        </li>
+                        <li class="useful-links">
+                            <a href="https://www.nidhi.tourism.gov.in/">
+                                <img src="{{asset('img/nidhi-logo.jpg')}}" alt="Government Logo" style="width: 15%">
                                 Nidhi
                             </a>
-                            <a class="useful-links" href="https://nagaland.gov.in/apps">
-                                <img src="{{asset('img/nagaland_logo.png')}}" alt="Government Logo" style="width: 33%">
+                        </li>
+                        <li class="useful-links">
+                            <a href="https://nagaland.gov.in/apps">
+                                <img src="{{asset('img/nagaland_logo.png')}}" alt="Government Logo" style="width: 15%">
                                 Nagaland Government APPS
                             </a>
-                            <a class="useful-links" href="https://pgportal.gov.in/">
-                                <img src="{{asset('img/emblem-dark.png')}}" alt="Government Logo" style="width: 20%">
+                        </li>
+                        <li class="useful-links">
+                            <a href="https://pgportal.gov.in/">
+                                <img src="{{asset('img/emblem-dark.png')}}" alt="Government Logo" style="width: 10%">
                                 Centralised Public Grievance Redress and Monitoring System
                             </a>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
                 <div class="col-12">
                     <div class="follow-us">

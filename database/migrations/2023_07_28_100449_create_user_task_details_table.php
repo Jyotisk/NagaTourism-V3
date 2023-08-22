@@ -19,6 +19,7 @@ class CreateUserTaskDetailsTable extends Migration
             $table->bigInteger('task_id');
             $table->text('comments');
             $table->text('document');
+            $table->text('google_drive');
             $table->date('date');
             $table->bigInteger('status')->comment('0 for applied, 1 for approved, 2 for rejected');
             $table->timestamps();
