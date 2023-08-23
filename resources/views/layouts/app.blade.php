@@ -10,48 +10,25 @@
     <link rel="stylesheet" href="{{asset('css/user/owl-carousel.css')}}" />
     <link rel="stylesheet" href="{{asset('css/user/owl-carousel-default.css')}}" />
     <link rel="stylesheet" href="{{asset('css/user/uikit.css')}}" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <header class="head-section">
         <div class="d-flex align-items-center justify-content-between p-3">
-            <a href="{{route('dashboard')}}">
-                <img class="logo" src="{{asset('img/new-logo.png')}}" alt="Logo">
-            </a>
-            <div class="dropdown">
-                <button class="btn btn-secondary btn-profile dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    <i class="fa-solid fa-user"></i>
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="{{route('user-profile')}}">My Profile</a></li>
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li>
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
 
-                            <a class="dropdown-item" :href="route('logout')" onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                                {{ __('Log Out') }}
-                            </a>
-                        </form>
-                    </li>
-                </ul>
-            </div>
         </div>
     </header>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; font-size: 20px">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; font-size: 20px">
         <div class="container-fluid">
-            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <a class="navbar-brand p-0 m-0" href="{{route('dashboard')}}">
+                <img class="logo" src="{{asset('img/new-logo.png')}}" alt="Logo">
+            </a>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav gap-3 mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -63,8 +40,7 @@
                         <a class="nav-link" href="#">Blogs</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Destinations
                         </a>
                         <ul class="dropdown-menu">
@@ -74,8 +50,7 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Toursit Corner
                         </a>
                         <ul class="dropdown-menu">
@@ -85,14 +60,32 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Registrations
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Name-1</a></li>
                             <li><a class="dropdown-item" href="#">Name-2</a></li>
                             <li><a class="dropdown-item" href="#">Name-2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link btn-profile dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                        <ul class="dropdown-menu btn-profile-menu">
+                            <li><a class="dropdown-item" href="{{route('user-profile')}}">My Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li>
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+
+                                    <a class="dropdown-item" :href="route('logout')" onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                        {{ __('Log Out') }}
+                                    </a>
+                                </form>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -103,10 +96,10 @@
     <!-- Image Slider -->
     <div id="imageSlider" class="carousel slide mb-4" data-bs-ride="true">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="0" class="active" aria-current="true"
-                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="3" aria-label="Slide 4"></button>
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -117,6 +110,9 @@
             </div>
             <div class="carousel-item">
                 <img src="{{asset('img/slider3.jpg')}}" class="d-block w-100" alt="Slider Pic">
+            </div>
+            <div class="carousel-item">
+                <img src="{{asset('img/slider4.jpg')}}" class="d-block w-100" alt="Slider Pic">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#imageSlider" data-bs-slide="prev">
@@ -133,16 +129,13 @@
     {{$slot}}
 
     <div class="chat-for-help">
-        <a href="https://wa.me/918638985513" class="help-btn whatsAppBtn" rel="tooltip" type="button"
-            data-bs-placement="left" data-bs-toggle="tooltip" data-bs-title="Want Any Help? Chat with us!">
+        <a href="https://wa.me/918638985513" class="help-btn whatsAppBtn" rel="tooltip" type="button" data-bs-placement="left" data-bs-toggle="tooltip" data-bs-title="Want Any Help? Chat with us!">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
-        <a href="tel:1234567890" class="help-btn callBtn" rel="tooltip" type="button" data-bs-placement="left"
-            data-bs-toggle="tooltip" data-bs-title="Want Any Help? Call us!">
+        <a href="tel:1234567890" class="help-btn callBtn" rel="tooltip" type="button" data-bs-placement="left" data-bs-toggle="tooltip" data-bs-title="Want Any Help? Call us!">
             <i class="fa-solid fa-phone"></i>
         </a>
-        <a href="mailto:webdesign@example.com" class="help-btn emailBtn" rel="tooltip" type="button"
-            data-bs-placement="left" data-bs-toggle="tooltip" data-bs-title="Want Any Help? Mail with us!">
+        <a href="mailto:webdesign@example.com" class="help-btn emailBtn" rel="tooltip" type="button" data-bs-placement="left" data-bs-toggle="tooltip" data-bs-title="Want Any Help? Mail with us!">
             <i class="fa-solid fa-envelope"></i>
         </a>
     </div>
@@ -416,14 +409,19 @@
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
-var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-var popoverList = popoverTriggerList.map(function(popoverTriggerEl) {
-    return new bootstrap.Popover(popoverTriggerEl)
-})
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl)
-})
+    //Navigation
+    $(window).scroll(function() {
+        $('nav').toggleClass('fixed-top scrolled', $(this).scrollTop() > 200);
+    });
+
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function(popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    })
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
 </script>
 
 </html>
