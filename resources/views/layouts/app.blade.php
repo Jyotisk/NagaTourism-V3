@@ -411,7 +411,7 @@
 <script>
     //Navigation
     $(window).scroll(function() {
-        $('nav').toggleClass('fixed-top scrolled', $(this).scrollTop() > 200);
+        $('.navbar').toggleClass('fixed-top scrolled', $(this).scrollTop() > 200);
     });
 
     var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
