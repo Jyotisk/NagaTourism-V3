@@ -267,7 +267,7 @@
                                                 <label for="comment">Comments<span class="text-danger">*</span></label>
                                                 <span class="text-danger" id="comments_error"></span>
                                             </div>
-                                            <div class="form-floating mb-3">
+                                            <div class="mb-3">
                                                 <label for="comment">Google Drive Link (If the file is more big then
                                                     Admissible
                                                     size)</label>

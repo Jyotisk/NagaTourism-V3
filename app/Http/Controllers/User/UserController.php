@@ -107,6 +107,7 @@ public function SubmitTask(Request $request){
                 $task->user_id = Auth::user()->id;
                 $document_path = $request->file('document')->store('TaskImage', 'public');
                 $task->document = $document_path;
+                $task->google_drive = $request->google_drive;
                 $task->date = date('Y-m-d');
                 $task->status = 0;
                 $task->save();
