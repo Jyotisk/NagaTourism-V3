@@ -17,7 +17,7 @@ class UserController extends Controller
 public function TaskDetails($id){
     $task_details=Task::where('id',$id)->first();
     $task_status=UserTaskDetail::where('user_id',Auth::user()->id)->where('task_id',$id)->first();
-    $other_tasks=Task::whereNotIn('id', [$id])->limit(4)->get();
+    $other_tasks=Task::whereNotIn('id', [$id])->limit(2)->get();
     $new_tasks=Task::whereNotIn('id', [$id])->orderBy('id','DESC')->limit(2)->get();
     return view('users.task_details',compact('task_details','id','task_status','other_tasks','new_tasks'));
 }
